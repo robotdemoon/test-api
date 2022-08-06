@@ -6,6 +6,14 @@ const profileRoutes = require('../routes/profile.routes')
 
 const app = express()
 const router = express.Router()
+// Import Models
+
+const PersonModel = require('../models/person.model');
+const UserModel = require('../models/user.model');
+
+// Create Relations
+
+UserModel.belongsTo(PersonModel, {foreignKey: 'person_id', as: 'person'})
 
 app.use(cors())
 app.use(express.json())
