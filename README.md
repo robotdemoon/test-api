@@ -25,6 +25,12 @@ Use the package manager [npm](https://www.npmjs.com/get-npm) to install "each li
 npm install
 ```
 
+# Run project
+
+```bash
+npm run start:dev
+```
+
 # Endpoints
 
 This project expose 3 endpoints:

@@ -1,6 +1,13 @@
 const UserModel = require('../models/user.model')
 const ERRORS = require('../constants/global.errors')
 
+/**
+ * Validate an user with email and password
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ * @return {message: string, token: string}
+ */
 exports.getToken = (req, res, next) => {
 
     const email = req.body.email  ? req.body.email : '';

@@ -2,6 +2,12 @@ const PersonModel = require('../models/person.model')
 const UserModel = require('../models/user.model')
 const ERRORS = require('../constants/global.errors');
 
+/**
+ * Get a valid user profile
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
 exports.getProfile = (req, res, next) => {
     const access_token = req.params.token ? req.params.token : '';
     UserModel.findOne({
